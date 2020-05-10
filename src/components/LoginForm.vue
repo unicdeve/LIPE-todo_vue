@@ -33,9 +33,9 @@
 import { mapActions, mapState } from "vuex";
 
 export default {
-  name: "AddressForm",
+  name: "LoginForm",
   computed: {
-    ...mapState(["user", "errors"])
+    ...mapState(["user", "errors", "selectedTodo"])
   },
   data() {
     return {
@@ -67,7 +67,7 @@ export default {
 
       if (this.user.username) this.$router.push("/");
 
-      if (this.selectedAddress.name) this.formData = this.selectedAddress;
+      if (this.selectedTodo.title) this.formData = this.selectedTodo;
     });
   }
 };

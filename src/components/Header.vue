@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <div class="nav-container">
-      <router-link to="/">Home</router-link>
+      <router-link to="/">Todos</router-link>
       <router-link to="/login" v-if="!isAuthenticated">Login</router-link>
       <span @click="logout()" v-if="isAuthenticated">Log out</span>
     </div>

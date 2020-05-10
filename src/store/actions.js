@@ -16,13 +16,26 @@ export default {
       commit("setErrors", errors);
     }
   },
-
   logout: ({ commit }) => {
     localStorage.removeItem("user");
     commit("logoutUser");
   },
-
   clearError: ({ commit }) => {
     commit("setErrors", {});
+  },
+  addTodo: ({ commit }, todo) => {
+    commit("appendTodo", todo);
+  },
+  editTodo: ({ commit }, todo) => {
+    commit("editTodo", todo);
+  },
+  markDone: ({ commit }, todo) => {
+    commit("markDone", todo);
+  },
+  selectTodo: ({ commit }, todo) => {
+    commit("selectTodo", todo);
+  },
+  deleteTodo: ({ commit }, todo) => {
+    commit("removeTodo", todo);
   }
 };

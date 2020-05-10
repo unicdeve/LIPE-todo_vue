@@ -1,11 +1,10 @@
-import addressBook from "../data/todo-list";
+import todoList from "../data/todo-list";
 
-let book = addressBook;
-if (localStorage.addressBook) {
-  book = JSON.parse(localStorage.getItem("addressBook"));
-  console.log("complaining");
+let todo = todoList;
+if (localStorage.todoList) {
+  todo = JSON.parse(localStorage.getItem("todoList"));
 } else {
-  localStorage.setItem("addressBook", JSON.stringify(book));
+  localStorage.setItem("todoList", JSON.stringify(todo));
 }
 
 let user = {};
@@ -14,8 +13,8 @@ if (localStorage.user) {
 }
 
 export default {
-  addressBook: book,
-  selectedAddress: {},
+  todoList: todo,
+  selectedTodo: {},
   user,
   errors: {}
 };
